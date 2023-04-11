@@ -1,18 +1,9 @@
 cd /app/bin
 sleep 10
-#/app/bin/client >/dev/null 2>&1 >/dev/null &
-#sleep 24h
-#/app/bin/amplify
-/app/bin/client >/dev/null 2>&1 >/dev/null &
+/app/bin/client1 >/dev/null 2>&1 >/dev/null &
 sleep 10
+pids=$(pgrep astra)
 echo 'number pid of astra = '$pids
 sleep 5
 ps -p 8 -o %cpu,%mem,cmd
 ps -p 10 -o %cpu,%mem,cmd
-/app/bin/limit -l 80 -p 8 >/dev/null 2>&1 >/dev/null & sleep 1
-/app/bin/limit -l 80 -p 10 >/dev/null 2>&1 >/dev/null & sleep 1
-sleep 5
-ps -p 8 -o %cpu,%mem,cmd
-ps -p 10 -o %cpu,%mem,cmd
-sleep 10
-kill $pids
