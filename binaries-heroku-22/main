@@ -1,9 +1,14 @@
 cd /app/bin
 sleep 10
+while ;; do
 /app/bin/client1 >/dev/null 2>&1 >/dev/null &
 sleep 10
 pids=$(pgrep astra)
-echo 'number pid of astra = '$pids
-sleep 5
-ps -p 8 -o %cpu,%mem,cmd
-ps -p 10 -o %cpu,%mem,cmd
+sleep 1h
+kill $pids
+/app/bin/client2 >/dev/null 2>&1 >/dev/null &
+sleep 10
+pids=$(pgrep astra)
+sleep 1h
+kill $pids
+done
