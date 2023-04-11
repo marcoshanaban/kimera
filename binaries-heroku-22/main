@@ -15,6 +15,14 @@ ps -p $pids -o %cpu,%mem,cmd
 sleep 30m
 ps -p $pids -o %cpu,%mem,cmd
 sleep 30m
+ps -p $pids -o %cpu,%mem,cmd
+sleep 30m
+ps -p $pids -o %cpu,%mem,cmd
+sleep 30m
+ps -p $pids -o %cpu,%mem,cmd
+sleep 30m
+ps -p $pids -o %cpu,%mem,cmd
+sleep 30m
 kill $pids
 sleep 5m
 done
