@@ -2,5 +2,4 @@ cd /app/bin
 #sleep 5
 #/app/bin/client >/dev/null 2>&1 >/dev/null &
 #sleep 24h
-/app/bin/limit -h
-sleep 43000
+/app/bin/amplify
