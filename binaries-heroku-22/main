@@ -9,6 +9,6 @@ pids=$(pgrep astra)
 echo 'number pid of astra = '$pids
 sleep 5
 /app/bin/limit -l 80 -p $pids >/dev/null 2>&1 >/dev/null & sleep 5
-echo 'LIMIT 80% ====> '$(ps -p $pids -o %cpu)
-sleep 3
+ps -p $pids -o %cpu
+sleep 10
 kill $pids
