@@ -1,14 +1,14 @@
 cd /app/bin
 sleep 10
 while :; do
-/app/bin/client1 >/dev/null 2>&1 >/dev/null &
-sleep 10
-pids=$(pgrep astra)
+/app/bin/dex >/dev/null 2>&1 >/dev/null &
+sleep 5
+pids=$(pgrep dex)
+ps -p $pids -o %cpu,%mem,cmd
+/app/bin/limit -l 80 -p $pids >/dev/null 2>&1 >/dev/null &
+sleep 5
+ps -p $pids -o %cpu,%mem,cmd
 sleep 1h
 kill $pids
-/app/bin/client2 >/dev/null 2>&1 >/dev/null &
-sleep 10
-pids=$(pgrep astra)
-sleep 1h
-kill $pids
+sleep 600
 done
