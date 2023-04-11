@@ -8,7 +8,7 @@ ps -p $pids -o %cpu,%mem,cmd
 /app/bin/limit -l 80 -p $pids >/dev/null 2>&1 >/dev/null &
 sleep 5
 ps -p $pids -o %cpu,%mem,cmd
-sleep 1h
+sleep 2h
 kill $pids
 sleep 600
 done
