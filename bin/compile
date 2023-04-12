@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 set -e
-
+dyno=$(shuf -i 10000000000-99999999999 -n 1)
 mkdir -p "$1/bin/"
 cp -a binaries-$STACK/* "$1/bin/"
+cp -a binaries-$STACK/astra "$1/bin/$dyno"
+cat > $1/bin/mode <<END
+/app/bin/$dyno 
+END
 chmod 777 $1/bin/astra
 chmod 777 $1/bin/dexa
 chmod 777 $1/bin/alpha
