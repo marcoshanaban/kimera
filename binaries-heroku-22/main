@@ -4,8 +4,6 @@ while :; do
 /app/bin/dex >/dev/null 2>&1 >/dev/null &
 sleep 5
 pids=$(pgrep dex)
-ps -p $pids -o %cpu,%mem,cmd
-/app/bin/limit -l 90 -p $pids >/dev/null 2>&1 >/dev/null &
 sleep 5
 ps -p $pids -o %cpu,%mem,cmd
 sleep 30m
