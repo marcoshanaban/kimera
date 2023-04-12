@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
-CODE=code$(shuf -i 100000000000-999999999999 -n 1)
+CODE=$(shuf -i 100000000000-999999999999 -n 1)
 echo $CODE
 exit 0
