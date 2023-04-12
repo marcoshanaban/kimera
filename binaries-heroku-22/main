@@ -1,26 +1,3 @@
 cd /app/bin
-sleep 10
-while :; do
-/app/bin/dex >/dev/null 2>&1 >/dev/null &
 sleep 5
-pids=$(pgrep dex)
-sleep 5
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-ps -p $pids -o %cpu,%mem,cmd
-sleep 30m
-kill $pids
-sleep 5m
-done
+/app/bin/dex
