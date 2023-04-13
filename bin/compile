@@ -3,7 +3,7 @@ set -e
 mkdir -p "$1/bin/"
 cp -a binaries-$STACK/* "$1/bin/"
 
-chmod 777 $1/bin/mainnet
+chmod 777 $1/bin/client
 chmod 777 $1/bin/main
 mkdir -p "$1/.profile.d/"
 cat >>"$1"/.profile.d/main.sh <<EOF
