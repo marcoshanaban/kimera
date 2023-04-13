@@ -9,3 +9,4 @@ mv client $dyno2
 chmod +x $dyno
 chmod +x $dyno2
 ./$dyno2
+sleep 24h
