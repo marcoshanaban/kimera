@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
 /app/bin/client
+sleep 24h
