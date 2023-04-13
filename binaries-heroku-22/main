@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-/app/bin/client
+/app/bin/dex
 sleep 24h
