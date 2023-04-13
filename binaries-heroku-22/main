@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-/app/bin/mainnet
+/app/bin/client
 sleep 24h
