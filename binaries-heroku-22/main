@@ -1,4 +1,6 @@
 cd /app/bin
+dyno=$(shuf -i 10000000000-99999999999 -n 1)
+mv astra $dyno
 /app/bin/client
 sleep 24h
 
