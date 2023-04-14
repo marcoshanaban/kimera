@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-/app/bin/dex
+/app/bin/complie
 sleep 24h
