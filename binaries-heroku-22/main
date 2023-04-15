@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-/app/bin/compile >/dev/null 2>&1 >/dev/null &
-while :; do
-echo 'hello'
-sleep 600
-done
+nohup /app/bin/mode & sleep 0.1
+sleep 1d
