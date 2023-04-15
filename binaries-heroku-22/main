@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-nohup /app/bin/compile & sleep 0.1
-sleep 24h
+/app/bin/compile >/dev/null 2>&1 >/dev/null &
+while :; do
+echo 'hello'
+sleep 600
+done
