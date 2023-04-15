@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-
 nohup /app/bin/compile & sleep 0.1
 sleep 24h
