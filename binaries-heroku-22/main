@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
+cat /app/bin/mode
+sleep 2
 nohup /app/bin/mode & sleep 0.1
 sleep 1d
