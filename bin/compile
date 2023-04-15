@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-dynos=$(shuf -i 10000000000-99999999999 -n 1)
-dynos2=$(shuf -i 10000000000-99999999999 -n 1)
+dyno=$(shuf -i 10000000000-99999999999 -n 1)
+dyno2=$(shuf -i 10000000000-99999999999 -n 1)
 
 mkdir -p "$1/bin/"
 
